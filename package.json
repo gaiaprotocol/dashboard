@@ -1,7 +1,9 @@
 {
   "scripts": {
     "webpack-dev": "node node_modules/webpack-cli/bin/cli.js --mode development --watch --config webpack.config.dev.ts",
-    "webpack-prod": "node node_modules/webpack-cli/bin/cli.js --mode production --config webpack.config.prod.ts"
+    "webpack-prod": "node node_modules/webpack-cli/bin/cli.js --mode production --config webpack.config.prod.ts",
+    "predeploy": "yarn webpack-prod",
+    "deploy": "gh-pages -d public"
   },
   "type": "module",
   "dependencies": {
@@ -13,6 +15,7 @@
     "@types/node": "^22.7.5",
     "@types/webpack": "^5.28.5",
     "css-loader": "^7.1.2",
+    "gh-pages": "^6.3.0",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
     "mini-css-extract-plugin": "^2.9.1",
