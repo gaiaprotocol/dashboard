@@ -1,5 +1,0 @@
-languageIds:
-  - typescript
-usageMatchRegex:
-  - "[^\\w\\d]msg\\(['\"`]({key})['\"`]"
-monopoly: true

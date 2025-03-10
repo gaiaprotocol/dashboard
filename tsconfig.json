@@ -67,7 +67,6 @@
   },
   "exclude": [
     "dist",
-    "supabase",
     "node_modules",
     ".vscode",
     "test-src",
@@ -75,5 +74,15 @@
     "test",
     "typechain-types",
     "scripts",
-  ]
+    "legacy",
+    "public",
+    "server"
+  ],
+  "ts-node": {
+    "transpileOnly": true,
+    "moduleTypes": {
+      "webpack.config.dev.ts": "cjs",
+      "webpack.config.prod.ts": "cjs",
+    }
+  }
 }

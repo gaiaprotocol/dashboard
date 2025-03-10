@@ -1,1 +1,1 @@
-# dashboard
+# Gaia Protocol Dashboard
