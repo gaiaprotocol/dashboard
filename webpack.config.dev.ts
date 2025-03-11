@@ -37,7 +37,7 @@ const config: webpack.Configuration = {
   },
   output: {
     filename: "[name]-dev.js",
-    path: path.resolve("public"),
+    path: path.resolve("docs"),
   },
   plugins: [
     new MiniCssExtractPlugin({

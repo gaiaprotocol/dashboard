@@ -75,7 +75,7 @@
     "typechain-types",
     "scripts",
     "legacy",
-    "public",
+    "docs",
     "server"
   ],
   "ts-node": {
