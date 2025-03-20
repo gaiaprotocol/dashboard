@@ -8,6 +8,7 @@
   "type": "module",
   "dependencies": {
     "@common-module/app-components": "^0.1.6",
+    "@gaiaprotocol/dashboard": "^0.0.1",
     "@gaiaprotocol/ui-preset": "^0.0.2"
   },
   "devDependencies": {
