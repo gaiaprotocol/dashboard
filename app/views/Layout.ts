@@ -24,6 +24,15 @@ export default class Layout extends View {
             onclick: () => Router.go("/"),
           }),
         ),
+        el(
+          "ul",
+          el(
+            "li",
+            el("a", "The Gods", {
+              onclick: () => Router.go("/thegods"),
+            }),
+          ),
+        ),
       ),
       this.contentContainer = el("main"),
     ).appendTo(BodyNode);
