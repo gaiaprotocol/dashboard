@@ -30,10 +30,38 @@
   }
 
   >.tab-group {
-    margin: 20px;
+    max-width: 1088px;
+    margin   : 20px auto;
   }
 
   >main {
-    padding: 20px;
+    padding  : 20px;
+    max-width: 1128px;
+    margin   : 0 auto;
+  }
+
+  >footer {
+    display    : flex;
+    align-items: center;
+    max-width  : 1128px;
+    margin     : 0 auto;
+    padding    : 108px 20px 34px;
+
+    >.credit {
+      flex-grow: 1;
+      color    : #b4b4b4;
+      font-size: 14px;
+    }
+
+    >.social {
+      display    : flex;
+      align-items: center;
+      gap        : 16px;
+
+      >a {
+        display  : flex;
+        font-size: 14px;
+      }
+    }
   }
 }
