@@ -1,4 +1,5 @@
 import { BodyNode, DomNode, el, Router, View } from "@common-module/app";
+import { Tab, TabGroup } from "@common-module/app-components";
 import GaiaProtocolLogo from "../components/GaiaProtocolLogo.js";
 
 export default class Layout extends View {
@@ -8,6 +9,7 @@ export default class Layout extends View {
     Layout._current.contentContainer.append(content);
   }
 
+  private tabGroup: TabGroup<string>;
   private contentContainer: DomNode;
 
   constructor() {
@@ -16,25 +18,13 @@ export default class Layout extends View {
 
     this.container = el(
       ".layout",
-      el(
-        "nav",
-        el(
-          "h1",
-          el("a", new GaiaProtocolLogo(), "Dashboard", {
-            onclick: () => Router.go("/"),
-          }),
-        ),
-        el(
-          "ul",
-          el(
-            "li",
-            el("a", "The Gods", {
-              onclick: () => Router.go("/thegods"),
-            }),
-          ),
-        ),
+      el("header", el("h1", new GaiaProtocolLogo(), "Dashboard")),
+      this.tabGroup = new TabGroup(
+        new Tab({ label: "The Gods", value: "thegods" }),
       ),
       this.contentContainer = el("main"),
     ).appendTo(BodyNode);
+
+    this.tabGroup.on("tabSelected", (value) => Router.go(`/${value}`)).init();
   }
 }

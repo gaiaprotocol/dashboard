@@ -1747,4 +1747,38 @@ li.chat-content-list-item.temp {
   flex-direction: column;
   gap: 8px;
 }
+.layout {
+  padding-top: 72px;
+}
+@container (width <= 520px) {
+  .layout {
+    padding-bottom: 56px;
+  }
+}
+.layout > header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(24px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+}
+.layout > header > h1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  font-family: "Trajan Pro";
+}
+.layout > .tab-group {
+  margin: 20px;
+}
+.layout > main {
+  padding: 20px;
+}
 

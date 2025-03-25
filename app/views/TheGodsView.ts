@@ -1,9 +1,10 @@
-import { el, View } from "@common-module/app";
+import { View } from "@common-module/app";
+import { TheGodsDashboard } from "@gaiaprotocol/dashboard";
 import Layout from "./Layout.js";
 
 export default class TheGodsView extends View {
   constructor() {
     super();
-    Layout.content = this.container = el(".the-gods-view", "The Gods View");
+    Layout.content = this.container = new TheGodsDashboard();
   }
 }
