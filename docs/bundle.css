@@ -1366,6 +1366,34 @@ li.chat-content-list-item.temp {
   font-size: 24px;
   font-weight: bold;
 }
+.the-gods-dashboard > section.stats > .content {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+@container (width <= 520px) {
+  .the-gods-dashboard > section.stats > .content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.the-gods-dashboard > section.stats > .content > .loading-spinner {
+  width: 24px;
+  height: 24px;
+}
+.the-gods-dashboard > section.stats > .content > .stat {
+  background-color: #222;
+  border-radius: 8px;
+  padding: 16px;
+}
+.the-gods-dashboard > section.stats > .content > .stat > .value {
+  font-size: 24px;
+  font-weight: bold;
+}
+.the-gods-dashboard > section.stats > .content > .stat > .label {
+  font-size: 16px;
+  color: #aaa;
+}
 /* Gaia Components */
 .logo-input {
   position: relative;
@@ -1780,7 +1808,8 @@ li.chat-content-list-item.temp {
   font-family: "Trajan Pro";
 }
 .layout > .tab-group {
-  max-width: 1088px;
+  padding: 0 20px;
+  max-width: 1128px;
   margin: 20px auto;
 }
 .layout > main {
