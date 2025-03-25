@@ -1,4 +1,9 @@
-import { Router, SPAInitializer } from "@common-module/app";
+import {
+  Router,
+  SPAInitializer,
+  Theme,
+  ThemeManager,
+} from "@common-module/app";
 import { AppCompConfig } from "@common-module/app-components";
 import { GaiaUIPreset } from "@gaiaprotocol/ui-preset";
 import AppConfig, { IAppConfig } from "./AppConfig.js";
@@ -9,6 +14,8 @@ export default async function init(config: IAppConfig) {
   AppConfig.init(config);
   SPAInitializer.init();
   GaiaUIPreset.init();
+
+  ThemeManager.theme = Theme.Dark;
 
   AppCompConfig.updateTabBackgroundOnSelect = (tabBackground, tab) => {
     const leftOffset = tab.htmlElement.offsetLeft;

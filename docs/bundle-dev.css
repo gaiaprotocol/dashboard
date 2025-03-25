@@ -1400,6 +1400,9 @@ li.chat-content-list-item.temp {
   font-size: 16px;
   color: #aaa;
 }
+.the-gods-dashboard > section.graph > .the-gods-graph {
+  margin-top: 24px;
+}
 /* Gaia Components */
 .logo-input {
   position: relative;
