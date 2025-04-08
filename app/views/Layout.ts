@@ -21,7 +21,7 @@ export default class Layout extends View {
       ".layout",
       el("header", el("h1", new GaiaProtocolLogo(), "Dashboard")),
       this.tabGroup = new TabGroup(
-        new Tab({ label: "The Gods", value: "thegods" }),
+        new Tab({ label: "Assets", value: "assets" }),
       ),
       this.contentContainer = el("main"),
       el(

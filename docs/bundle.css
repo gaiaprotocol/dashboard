@@ -1362,7 +1362,7 @@ li.chat-content-list-item.temp {
   flex-direction: column;
   gap: 96px;
 }
-.the-gods-dashboard > section > h2 {
+.the-gods-dashboard > section > h3 {
   font-size: 24px;
   font-weight: bold;
 }
@@ -1840,5 +1840,12 @@ li.chat-content-list-item.temp {
 .layout > footer > .social > a {
   display: flex;
   font-size: 14px;
+}
+.assets-view > section > h2 {
+  font-size: 28px;
+  font-weight: bold;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line-color);
+  margin-bottom: 32px;
 }
 
